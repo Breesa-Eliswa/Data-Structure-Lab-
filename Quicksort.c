@@ -7,7 +7,8 @@ void swap(int *p, int *q)
 {   int t ;
     t = *p;
     *p = * q;
-    *q= t ;}
+    *q= t ;
+}
     
 void main()
 {
@@ -22,7 +23,7 @@ void main()
     quicksort(a,0,(n-1));
     printf("Sorted array is \n");
     for(i=0;i<n;i++)
-        printf("   %d",a[i]);
+        printf(" \n  %d ",a[i]);
         
 }
 void quicksort(int a[], int lb, int ub)
@@ -47,10 +48,10 @@ int part(int a[],int lb, int ub)
         while(a[j]>key&&(j>lb)) 
              j--;
         if(i<j)
-          swap(&a[i],&a[i+1]);
+          swap(&a[i],&a[j]);
     }while(i<j);
     swap(&a[lb],&a[j]);
-     return (j);
+    return (j);
 }
 
 
